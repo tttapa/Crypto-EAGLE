@@ -27,8 +27,10 @@ RUN tar xf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz && \
     rm gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz
 ENV PATH="${PATH}:/home/develop/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin"
 RUN wget https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/binrel/sysroot/sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi.tar.xz
-RUN tar xf sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi.tar.xz && \
-    rm sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi.tar.xz
+RUN mkdir /home/develop/sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi
+WORKDIR /home/develop/sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi
+RUN tar xf ../sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi.tar.xz && \
+    rm ../sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi.tar.xz
 
 ARG WORKSPACE_ROOT
 VOLUME ${WORKSPACE_ROOT}

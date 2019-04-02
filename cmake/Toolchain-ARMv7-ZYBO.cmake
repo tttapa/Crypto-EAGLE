@@ -7,9 +7,8 @@ SET(CMAKE_SYSTEM_VERSION 1)
 SET(CMAKE_C_COMPILER   arm-linux-gnueabihf-gcc)
 SET(CMAKE_CXX_COMPILER arm-linux-gnueabihf-g++)
 
-# TODO
 # where is the target environment
-# SET(CMAKE_FIND_ROOT_PATH  /opt/)
+SET(CMAKE_FIND_ROOT_PATH /home/develop/sysroot-glibc-8.3-2019.03-x86_64-arm-linux-gnueabi)
 
 # search for programs in the build host directories
 SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
@@ -24,5 +23,5 @@ CACHE STRING "" FORCE)
 # -mfpu=neon-vfpv3")
 
 # Link all libraries statically
-SET(CMAKE_EXE_LINKER_FLAGS " -static"
-CACHE STRING "" FORCE)
+# SET(CMAKE_EXE_LINKER_FLAGS " -static"
+# CACHE STRING "" FORCE)
