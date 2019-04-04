@@ -23,5 +23,5 @@ CACHE STRING "" FORCE)
 # -mfpu=neon-vfpv3")
 
 # Link all libraries statically
-# SET(CMAKE_EXE_LINKER_FLAGS " -static"
+# SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static"
 # CACHE STRING "" FORCE)
